@@ -5,55 +5,56 @@
     <title>HandlebarsAutos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
+
   </head>
   <body>
 
   <div class="container">
-
-
-
-    <script id="template_person" type="text/x-handlebars-template">
-      <div class="row">
-        <div class="col-sm-12">
-          <h1>Especificaciones de Autos</h1>
+        <!--  -->
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>Especificaciones de Autos</h1>
+          </div>
         </div>
-      </div>
-      <div class="text-center"><button class="btn btn-primary btn-lg" id="load-cars">Mostrar Autos</button></div>
 
-      {{#each car}}
-      <div class="cars">
-        <div class="row car">
-          <div class="col-sm-5 col-md-4"><img src= {{this.imageUrl}} class="img-responsive img-thumbnail"></div>
-          <div class="col-sm-7 col-md-8">
-            <h3> {{this.name}} <small>{{this.released}}</small></h3>
-            <div class="row specs">
-              <div class="col-xs-3 text-center">
-                <span class="spec-value">{{this.power}}</span>
-                <span class="spec-label">Potencia</span>
-              </div>
-              <div class="col-xs-3 text-center">
-                <span class="spec-value">{{this.weight}}</span>
-                <span class="spec-label">Peso</span>
-              </div>
-              <div class="col-xs-3 text-center">
-                <span class="spec-value">{{this.turbo}}</span>
-                <span class="spec-label">Turbo</span>
-              </div>
-              <div class="col-xs-3 text-center">
-                <span class="spec-value">{{this.speed}}</span>
-                <span class="spec-label">Velocidad Max</span>
+    <div class="text-center"><button class="btn btn-primary btn-lg" id="load-cars">Mostrar Autos</button></div>
+    <div class="cars">
+
+      <script id="template_cars" type="text/x-handlebars-template">
+        {{#each car}}
+          <div class="row car">
+            <div class="col-sm-5 col-md-4"><img src= {{this.imageUrl}} class="img-responsive img-thumbnail"></div>
+            <div class="col-sm-7 col-md-8">
+              <h3> {{this.name}} <small>{{this.released}}</small></h3>
+              <div class="row specs">
+                <div class="col-xs-3 text-center">
+                  <span class="spec-value">{{this.power}}</span>
+                  <span class="spec-label">Potencia</span>
+                </div>
+                <div class="col-xs-3 text-center">
+                  <span class="spec-value">{{this.weight}}</span>
+                  <span class="spec-label">Peso</span>
+                </div>
+                <div class="col-xs-3 text-center">
+                  <span class="spec-value">{{this.turbo}}</span>
+                  <span class="spec-label">Turbo</span>
+                </div>
+                <div class="col-xs-3 text-center">
+                  <span class="spec-value">{{this.speed}}</span>
+                  <span class="spec-label">Velocidad Max</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      {{/each}}
-    </script>
+        {{/each}}
+      </script>
+    </div>
   </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
